@@ -13,7 +13,11 @@ namespace Quran
 		{
 			InitializeComponent();
 
-			MainPage = new Quran.MainPage();
+            MainPage = new NavigationPage(new Quran.MainPage())
+            {
+                BarBackgroundColor = Color.FromHex("#212121"),
+                BarTextColor = Color.White
+            };
 		}
 
 		protected override void OnStart ()

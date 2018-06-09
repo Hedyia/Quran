@@ -2,10 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Quran"
-             x:Class="Quran.MainPage">
+             x:Class="Quran.MainPage"
+             BackgroundColor="#212121">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.1,300,300"
+                         AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Image Source="quranImg" />
+        </StackLayout>
+        <Label 
+                    TextColor="White"
+                    FontSize="Medium"
+                AbsoluteLayout.LayoutBounds="0.5, 0.6"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+            تبَارَكَ الَّذِي نَزَّلَ الْفُرْقَانَ عَلَى عَبْدِهِ لِيَكُونَ لِلْعَالَمِينَ نَذِيراً
+        </Label>
+
+        <Button x:Name="btnCheckConnectivity"
+                    Text="Enter"
+                    BackgroundColor="#27ae60"
+                    TextColor="White"
+                    AbsoluteLayout.LayoutBounds="0, 1, 1,70"
+                    AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+    </AbsoluteLayout>
 
 </ContentPage>
